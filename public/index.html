@@ -1,12 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Visor de Mapas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://js.arcgis.com/4.24/"></script>
 </head>
+
 <body>
-    <h1>buenas</h1>
+    <div id="banner">
+        <h1>Visor de Recorridos GPS</h1>
+    </div>
+
+    <div id="main-content">
+        <div id="left-panel">
+            <section id="form-section">
+                <h2>Filtrar Datos</h2>
+                <form id="filter-form">
+                    <label for="start-date">Fecha y Hora Inicial:</label>
+                    <input type="datetime-local" id="start-date" name="start-date" required min="2024-08-09T00:00"
+                        max="2024-08-14T23:59">
+
+                    <label for="end-date">Fecha y Hora Final:</label>
+                    <input type="datetime-local" id="end-date" name="end-date" required min="2024-08-09T00:00"
+                        max="2024-08-14T23:59">
+
+                    <button type="button" id="filter">Filtrar</button>
+                </form>
+            </section>
+
+            <section id="table-section">
+                <h2>Resultados</h2>
+                <table id="results-table">
+                    <thead>
+                        <tr>
+                            <th>ID GPS</th>
+                            <th>Número de Puntos</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <div id="map-section">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="../src/app.js"></script>
 </body>
+
 </html>
