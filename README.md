@@ -108,7 +108,14 @@ Esto iniciará un servidor en `http://localhost:8080`  (o un puerto similar) don
 
 Navega a la carpeta que contiene tu archivo `index.html`. Abre el archivo en tu navegador web o arrástralo a una ventana del navegador. Verifica que el mapa y los elementos de la interfaz se carguen correctamente y que los filtros funcionen como se espera.
 
+## Ejemplos de como se deberia de ver el geovisor en tu navegador  
+
+Interfaz de la herramienta:  
+
+![1](https://github.com/user-attachments/assets/8f32f08b-504a-4372-a33a-0887d2ea5028)
 
 
+Visualización filtrando  por la fecha `10/08/2024` y por el rando horario de `01:55` a `2:05`:
 
 
+![2](https://github.com/user-attachments/assets/1dd07ea9-49b5-495b-bd94-eadd6aa6120c)
