@@ -17,16 +17,18 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000; /* Asegura que el banner esté encima de otros elementos */
 }
 
 #main-content {
     display: flex;
     flex: 1;
     margin-top: 60px; /* Ajusta el margen superior para dar espacio al banner */
+    flex-direction: row;
 }
 
 #left-panel {
-    width: 300px;
+    width: 350px; /* Aumento del ancho de la barra lateral */
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     background-color: #f4f4f4;
@@ -39,8 +41,14 @@ body {
     border: 1px solid #ddd;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    padding: 15px;
+    padding: 20px; /* Aumento del padding para mayor espacio */
     margin-bottom: 20px;
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+}
+
+#table-section {
+    max-height: 300px; /* Ajusta la altura máxima según tus necesidades */
+    overflow-y: auto; /* Permite el desplazamiento vertical */
 }
 
 #map-section {
@@ -48,6 +56,8 @@ body {
     height: calc(100vh - 60px); /* Ajusta la altura para tener en cuenta el banner */
     border: 1px solid #ddd;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Bordes redondeados para un diseño más suave */
+    min-height: 400px; /* Establece una altura mínima para asegurar que el mapa tenga suficiente espacio */
 }
 
 #map {
@@ -55,7 +65,7 @@ body {
 }
 
 header {
-    display: none; /* Se ocultara el header original */
+    display: none; /* Se ocultará el header original */
 }
 
 form {
@@ -68,8 +78,11 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="datetime-local"] {
+input[type="datetime-local"], input[type="text"], input[type="number"], textarea {
     margin-bottom: 15px;
+    padding: 10px; /* Aumento del padding para los inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px; /* Bordes redondeados para los inputs */
 }
 
 button {
@@ -88,6 +101,7 @@ button:hover {
 table {
     width: 100%;
     border-collapse: collapse;
+    margin: 0; /* Elimina el margen para ajustar el diseño */
 }
 
 table, th, td {
@@ -95,10 +109,47 @@ table, th, td {
 }
 
 th, td {
-    padding: 8px;
+    padding: 12px; /* Aumento del padding en celdas */
     text-align: left;
 }
 
 th {
     background-color: #f4f4f4;
+    font-weight: bold; /* Añade negrita a los encabezados de las tablas */
+}
+
+/*  Responsividad */
+
+
+@media (max-width: 768px) {
+    #left-panel {
+        width: 100%;
+        height: auto;
+        box-shadow: none; 
+    }
+
+    #main-content {
+        flex-direction: column;
+    }
+
+    #map-section {
+        height: 400px; 
+    }
+}
+
+
+@media (max-width: 480px) {
+    #banner {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    input[type="datetime-local"], input[type="text"], input[type="number"], textarea {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px;
+    }
 }
