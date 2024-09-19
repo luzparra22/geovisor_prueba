@@ -6,15 +6,19 @@ Este proyecto crea un geovisor que permite visualizar un mapa, aplicar filtros d
 
 ## Dependencias
 
-Para ejecutar este proyecto, asegúrate de tener las siguientes dependencias instaladas:
+## Dependencias necesarias
 
-- **Node.js**: Asegúrate de tener Node.js instalado en tu sistema. Puedes descargarlo desde [nodejs.org](https://nodejs.org/).
+Para ejecutar el proyecto que utiliza la API de ArcGIS para JavaScript, no es necesario instalar dependencias adicionales mediante npm. Sin embargo, asegúrate de que en tu archivo HTML se incluya correctamente el siguiente script para cargar la API desde el CDN:
+
+```html
+<script src="https://js.arcgis.com/4.25/"></script>
+```
 
 ## Instalación
 
 1. **Clona el repositorio**:
    ```bash
-   git clone https://github.com/luzparra22/geovisor_prueba
+   git clone https://github.com/luzparra22/geovisor_prueba.git
    ```
 ## Herramientas Utilizadas
 
@@ -58,6 +62,16 @@ Para ejecutar este proyecto, asegúrate de tener las siguientes dependencias ins
 
   - **Documentación**: [JavaScript Documentation](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
+
+### Requisitos previos
+
+ - `ArcGIS API for JavaScript`
+
+- `Navegador compatible`
+
+Este proyecto requiere un navegador que soporte JavaScript ES6 para manejar módulos modernos y funcionalidades del DOM.
+Servidor local (opcional):
+
 ## Implementación en Local
 
 Para ejecutar el geovisor en tu entorno local, sigue estos pasos:
@@ -67,7 +81,7 @@ Para ejecutar el geovisor en tu entorno local, sigue estos pasos:
 Si aún no lo has hecho, clona el repositorio desde GitHub a tu máquina local utilizando el siguiente comando en tu terminal:
 
 ```bash
-git https://github.com/luzparra22/geovisor_prueba
+git clone https://github.com/luzparra22/geovisor_prueba.git
 ```
 
 ### 2. Preparar Archivos
